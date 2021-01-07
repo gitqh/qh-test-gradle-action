@@ -1,4 +1,4 @@
-package com.tw.objectRelated;
+package com.tw.objectrelated;
 
 /**
  * Represents a car.

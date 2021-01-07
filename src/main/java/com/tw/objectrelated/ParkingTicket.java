@@ -1,4 +1,4 @@
-package com.tw.objectRelated;
+package com.tw.objectrelated;
 
 public class ParkingTicket {
 }

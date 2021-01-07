@@ -1,4 +1,4 @@
-package com.tw.questionSuperEasy;
+package com.tw.questionsupereasy;
 
 public class ButterMaker {
     /**

@@ -1,4 +1,4 @@
-package com.tw.objectRelated;
+package com.tw.objectrelated;
 
 public class ParkingLotFactory {
     private static final int MAX_CAPACITY = 2000;

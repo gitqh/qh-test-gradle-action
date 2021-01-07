@@ -1,4 +1,4 @@
-package com.tw.objectRelated;
+package com.tw.objectrelated;
 
 class ParkingLotImpl implements ParkingLot {
     // TODO: Please implement the class

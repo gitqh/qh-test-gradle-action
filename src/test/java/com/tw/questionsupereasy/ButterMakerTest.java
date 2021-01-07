@@ -1,4 +1,4 @@
-package com.tw.questionSuperEasy;
+package com.tw.questionsupereasy;
 
 import org.junit.jupiter.api.Test;
 

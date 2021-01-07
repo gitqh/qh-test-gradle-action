@@ -1,4 +1,4 @@
-package com.tw.objectRelated;
+package com.tw.objectrelated;
 
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +23,7 @@ class ParkingLotFactoryTest {
     }
 
     @Test
-    private void assertInvalidCapacity(int capacity, String expectedMessage) {
+    void assertInvalidCapacity(int capacity, String expectedMessage) {
         final IllegalArgumentException exception =
             assertThrows(IllegalArgumentException.class, () -> ParkingLotFactory.create(capacity));
         assertEquals(expectedMessage, exception.getMessage());

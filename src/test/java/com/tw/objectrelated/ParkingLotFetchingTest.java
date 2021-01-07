@@ -1,11 +1,11 @@
-package com.tw.objectRelated;
+package com.tw.objectrelated;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ParkingLotTestFetching {
+class ParkingLotFetchingTest {
     private ParkingLot createParkingLotWithPlentyOfCapacity() {
         return ParkingLotFactory.create(1000);
     }
