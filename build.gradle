@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id "jacoco"
+    id "org.sonarqube" version "3.0"
 }
 
 group 'com.tw'
@@ -23,3 +25,22 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.enabled true
+    }
+}
+
+sonarqube {
+    System.properties.'sonar.host.url' = System.properties.'gtb.sonar.host.url'
+    System.properties.'sonar.login' = System.properties.'gtb.sonar.login'
+    properties {
+        def studentTerm = System.properties.'gtb.sonar.student.term'
+        def studentName = System.properties.'gtb.sonar.student.name'
+        property "sonar.projectKey", "${project.group}:${project.name}:${studentTerm}:${studentName}"
+    }
+}
+
+project.tasks["sonarqube"].dependsOn "jacocoTestReport"
