@@ -2,7 +2,9 @@ package com.tw.objectrelated;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ParkingLotFactoryTest {
     @Test
@@ -22,10 +24,9 @@ class ParkingLotFactoryTest {
         assertNotNull(ParkingLotFactory.create(2000));
     }
 
-    @Test
-    void assertInvalidCapacity(int capacity, String expectedMessage) {
+    private void assertInvalidCapacity(int capacity, String expectedMessage) {
         final IllegalArgumentException exception =
-            assertThrows(IllegalArgumentException.class, () -> ParkingLotFactory.create(capacity));
+                assertThrows(IllegalArgumentException.class, () -> ParkingLotFactory.create(capacity));
         assertEquals(expectedMessage, exception.getMessage());
     }
 }

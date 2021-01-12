@@ -2,7 +2,9 @@ package com.tw.objectrelated;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 class ParkingLotParkingTest {
     private ParkingLot createParkingLotWithPlentyOfCapacity() {
@@ -37,7 +39,7 @@ class ParkingLotParkingTest {
         final int capacity = 10;
         final ParkingLot parkingLot = ParkingLotFactory.create(capacity);
 
-        for (int i = 0; i < capacity; ++ i) {
+        for (int i = 0; i < capacity; ++i) {
             // When
             final ParkingTicket ticket = parkingLot.park(new Car());
 
