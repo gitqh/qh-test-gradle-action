@@ -1,4 +1,4 @@
 package com.tw.objectrelated;
 
-public class ParkingTicket {
+public class ParkingTicket {  //NOSONAR
 }
