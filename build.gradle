@@ -34,12 +34,12 @@ jacocoTestReport {
 }
 
 sonarqube {
-    System.properties.'sonar.host.url' = System.properties.'gtb.sonar.host.url'
-    System.properties.'sonar.login' = System.properties.'gtb.sonar.login'
     properties {
+        System.properties.'sonar.host.url' = System.properties.'gtb.sonar.host.url'
+        System.properties.'sonar.login' = System.properties.'gtb.sonar.login'
         def studentTerm = System.properties.'gtb.sonar.student.term'
         def studentName = System.properties.'gtb.sonar.student.name'
-        property "sonar.projectKey", "${project.group}:${project.name}:${studentTerm}:${studentName}"
+        property "sonar.projectKey", "${studentName}:${studentTerm}:${project.name}"
     }
 }
 

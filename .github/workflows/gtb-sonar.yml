@@ -1,0 +1,24 @@
+name: gtb sonar
+on:
+  workflow_dispatch:
+
+jobs:
+  sonar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: prepare gradle env
+        run: |
+          mkdir ~/.gradle && touch ~/.gradle/gradle.properties
+          {
+            echo "systemProp.gtb.sonar.host.url=${{ secrets.SONAR_ADDRESS }}"
+            echo "systemProp.gtb.sonar.login=${{ secrets.SONAR_TOKEN }}"
+            echo "systemProp.gtb.sonar.student.term=${{ secrets.STUDENT_TERM }}"
+            echo "systemProp.gtb.sonar.student.name=${{ secrets.STUDENT_NAME }}"
+          } > ~/.gradle/gradle.properties
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+      - uses: eskatos/gradle-command-action@v1
+        with:
+          arguments: sonarqube
