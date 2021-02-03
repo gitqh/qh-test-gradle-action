@@ -7,12 +7,12 @@ public class ButterMaker {
      * before small pieces. Return -1 if it is impossible to be done.
      *
      * @param smallButterCount The total pieces of small butters
-     * @param bigButterCount The total pieces of big butters.
-     * @param expectedKilo The total kilos of butter to make.
+     * @param bigButterCount   The total pieces of big butters.
+     * @param expectedKilo     The total kilos of butter to make.
      * @return The total pieces of small butters used.
      */
     public static int getSmallButterUsage(
-        int smallButterCount, int bigButterCount, int expectedKilo) {
+            int smallButterCount, int bigButterCount, int expectedKilo) {
         // TODO: Please implement the method:
         // <-start-
         throw new RuntimeException("Delete me");
