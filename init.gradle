@@ -1,0 +1,14 @@
+// clear aliyun repositories
+allprojects {
+    repositories {
+        all { ArtifactRepository repo ->
+            def url = repo.url.toString()
+            def ALI_YUN_URL = 'https://maven.aliyun.com/repository'
+            if (url.startsWith(ALI_YUN_URL)) {
+                project.logger.lifecycle "Repository ${repo.url} was removed."
+                remove repo
+            }
+        }
+    }
+}
+

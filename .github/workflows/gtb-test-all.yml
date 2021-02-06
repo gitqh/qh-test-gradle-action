@@ -15,7 +15,7 @@ jobs:
           java-version: '11'
       - name: Build with Gradle
         run: |
-          ./gradlew clean build test
+          ./gradlew clean build test -I init.gradle
       - if: ${{ success() }}
         run: echo "TEST_RESULT=true" >> $GITHUB_ENV
       - if: ${{ failure() }}
