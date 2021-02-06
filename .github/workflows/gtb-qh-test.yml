@@ -1,0 +1,21 @@
+name: qh test
+on:
+  workflow_dispatch:
+
+jobs:
+  showWithMirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+      - name: Show Origin Repos
+        run: |
+          ./gradlew showRepos
+      - name: Show Repos After Clearing
+        run: |
+          ./gradlew showRepos -I init.gradle
+
+
+

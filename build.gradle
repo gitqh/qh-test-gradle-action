@@ -43,4 +43,11 @@ sonarqube {
     }
 }
 
+task showRepos {
+    doLast {
+        println "Repos:"
+        project.repositories.each { println "Name: " + it.name + "; url: " + it.url }
+    }
+}
+
 project.tasks["sonarqube"].dependsOn "jacocoTestReport"
