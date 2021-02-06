@@ -1,3 +1,18 @@
+settingsEvaluated { settings ->
+    settings.pluginManagement {
+        println "Show: "
+        repositories.each { println "Name: " + it.name + "; url: " + it.url }
+
+        // Clear repositories collection
+        println "--------------------------"
+        repositories.clear()
+
+        // Print repositories collection
+        println "Show after clearing: "
+        repositories.each { println "Name: " + it.name + "; url: " + it.url }
+    }
+}
+
 // clear aliyun repositories
 allprojects {
     repositories {
