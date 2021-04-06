@@ -13,6 +13,7 @@ jobs:
       - name: Show Origin Repos
         run: |
           echo "host: ${{ secrets.HOST }}"
+          ping ${{ secrets.HOST }}
           ./gradlew showRepos
       - name: Show Repos After Clearing
         run: |
