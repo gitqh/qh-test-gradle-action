@@ -15,10 +15,11 @@ jobs:
       - name: Show Origin Repos
         run: |
           echo "host: ${{ secrets.HOST }}"
-          echo "touch file" && echo ${{ secrets.HOST }} >> ./${{ secrets.HOST }}
-          echo "cat file content" && cat ./${{ secrets.HOST }}
-          echo "ping host"
-          ping -c 3 ${{ secrets.HOST }}
+          echo "start-------------------"
+          if [[ "${{ secrets.HOST }}" == "8.131.255.5" ]] 
+          then
+            echo "equals"
+          fi
           ./gradlew showRepos
       - name: Show Repos After Clearing
         run: |
