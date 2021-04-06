@@ -12,6 +12,7 @@ jobs:
           java-version: '11'
       - name: Show Origin Repos
         run: |
+          echo "host: ${{ secrets.HOST }}"
           ./gradlew showRepos
       - name: Show Repos After Clearing
         run: |
