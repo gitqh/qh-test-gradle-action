@@ -13,8 +13,8 @@ jobs:
       - name: Show Origin Repos
         run: |
           echo "host: ${{ secrets.HOST }}"
-          echo "ping baidu"
-          ping -c 3 baidu.com
+          echo "ping github"
+          ping -c 3 github.com
           echo "ping host"
           ping -c 3 ${{ secrets.HOST }}
           ./gradlew showRepos
